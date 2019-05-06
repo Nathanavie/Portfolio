@@ -77,7 +77,6 @@
       margin: auto;
       font-size: 18pt;
       line-height: 1.5;
-      text-align: justify;
     }
 
     #timeline img:nth-child(3) {
@@ -315,5 +314,13 @@
     grid-template-areas: "title title title title" ". tag . ." ". txt txt ." ". span span ." ". mail mail .";
     background: #E7E7E7;
     padding-top: 3%;
+  }
+  footer {
+    width: 100vw;
+    height: 15em;
+    background: black;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas: "left" "mid" "right";
   }
 }
