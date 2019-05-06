@@ -1,5 +1,10 @@
 @media only screen and (max-width: 1200px) {
 
+
+    .firstnav {
+      display: none;
+    }
+
     header img {
       grid-column: 2;
       grid-area: logo;
@@ -29,12 +34,11 @@
     }
 
     .me img {
-      grid-column: 1;
-      grid-area: img;
-      height: 100vh;
+      display: none;
     }
 
     .me section:nth-child(2){
+      text-align: center;
       grid-column: 2;
       /* grid-row: 1; */
       grid-area: h1;
@@ -46,31 +50,24 @@
       margin: auto;
     }
 
-    .me section:nth-child(3) {
-      grid-column: 2;
-      /* grid-row: 2; */
-      grid-area: link;
-      width: 100%;
-      display: flex;
-      align-items: center;
-    }
-
     .me {
-      background: #E7E7E7;
+      background: linear-gradient(#00000080, #00000080), url(../img/Nathan.jpg), #E7E7E7;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       display: grid;
       height: 100vh;
-      grid-template-columns: 50% 50%;
-      grid-template-areas: "img h1" "img link";
+      grid-template-columns: 100vw;
+      grid-template-areas: "h1" "link";
+      color: #FFFFFF;
     }
 
     #timeline {
       display: grid;
-      height: 100vh;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 3em 37em;
-      grid-template-areas: "title title" "about timeline";
+      grid-template-columns: 100vw;
+      grid-template-areas: "title" "about" "timeline";
       background: #CCCCCC;
-      padding-top: 3%;
+      padding-top: 4em;
       transition: all 0.5s ease;
     }
 
@@ -85,7 +82,7 @@
     #timeline img:nth-child(3) {
       grid-area: timeline;
       max-width: 100%;
-      max-height: 100%;
+      width: 90vw;
       margin: auto;
       filter: grayscale(100);
     }
@@ -101,55 +98,76 @@
       grid-column: 4;
       grid-area: s3;
     }
+    .skill tr th h4 {
+      font-size: 23pt;
+    }
+    .skill {
+      width: 75vw;
+      margin-bottom: 3em;
+    }
     #skills {
       display: grid;
-      height: 100vh;
-      grid-template-columns: auto 25% 25% 25% auto;
-      grid-template-rows: 8em 32em;
-      grid-template-areas: "title title title title title" ". s1 s2 s3 .";
+      grid-template-columns: 100vw;
+      grid-template-areas: "title" "s1" "s2" "s3";
       background: #E7E7E7;
-      padding-top: 3%;
+      padding-top: 4em;
     }
     .dogwalk {
       grid-area: dog;
+      width: 90%;
+      height: 20em;
+      margin: auto;
+    }
+    .workbot {
+      width: 90%;
+      margin-top: 55%;
     }
     .calc {
       grid-area: calc;
+      width: 90%;
+      height: 20em;
+      margin: auto;
+      margin-top: 1em;
     }
     #work {
       display: grid;
-      height: 100vh;
-      grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 7em 32em;
-      grid-template-areas: "title title title title" ". dog calc. ";
+      grid-template-columns: 100%;
+      grid-template-areas: "title" "dog" "calc";
       background: #CCCCCC;
-      padding-top: 3%;
+      padding-top: 4em;
     }
 
     #contact h3 {
       grid-column: 1 / -1;
       grid-area: tag;
+      text-align: center;
     }
     #contact p {
       grid-column: 2 / 4;
       grid-area: txt;
+      margin: auto 1em;
     }
     #contact span {
       grid-column: 2 / 4;
-      grid-area: span;
+      grid-area: msg;
+      font-size: 20pt;
     }
     .mail {
       grid-column: 2 / 4;
       grid-area: mail;
+      width: 80vw;
+    }
+    .mail a p {
+      margin-top: 8% !important;
+      font-size: 15pt
     }
     #contact {
       display: grid;
       height: 100vh;
-      grid-template-columns: 10% 40% 40% 10%;
-      grid-template-rows: 7em 6em 6em 6em auto;
-      grid-template-areas: "title title title title" ". tag . ." ". txt txt ." ". span span ." ". mail mail .";
+      grid-template-columns: 100vw;
+      grid-template-areas: "title" "tag" "txt" "msg" "mail";
       background: #E7E7E7;
-      padding-top: 3%;
+      padding-top: 4em;
     }
 }
 @media only screen and (min-width: 1201px){
@@ -163,7 +181,7 @@
   }
 
   .mob-nav {
-    /* display: none; */
+    display: none;
   }
 
   header {
