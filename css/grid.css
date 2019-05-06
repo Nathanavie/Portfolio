@@ -165,6 +165,7 @@
       display: grid;
       height: 100vh;
       grid-template-columns: 100vw;
+      grid-template-rows: 6em 5em 6em 2em 10em;
       grid-template-areas: "title" "tag" "txt" "msg" "mail";
       background: #E7E7E7;
       padding-top: 4em;
