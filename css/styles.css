@@ -1,6 +1,45 @@
 .hidden {
   opacity: 0 !important;
 }
+
+/* close button styling. */
+#close {
+  background: none;
+  color: #FFFFFF;
+  padding-left: 0;
+  font-size: 34pt;
+  text-align: right;
+  cursor: pointer;
+}
+/* each link in side navigation styled to fill page correctly. */
+.sidenav a {
+  color: #FFFFFF;
+  width: 100%;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+  float: none;
+  text-align: left;
+}
+/* hover element for when user is pressing the button */
+.sidenav a:hover {
+  background: #FFFFFF81;
+}
+/* sidenav styling, stopping overflow off page and hiding the nav before user opens it */
+.sidenav {
+  height: 100vh;
+  width: 0%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background: #cccccc;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
 .fadein {
   animation: fadein 0.5s forwards;
 }
@@ -50,34 +89,34 @@ header img:hover {
   filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
-nav a {
+.desk-nav a {
   text-decoration: none;
   color: #350098;
   padding: .5em 2em;
   border: solid 0.5px #ccc;
   transition: all .5s ease;
 }
-nav {
+.desk-nav {
   display: inline-block;
   margin: auto;
   padding-right: 4vw;
   height: 100%;
   transition: all .3s ease;
 }
-nav a:hover {
+.desk-nav a:hover {
   background: #E7E7E7;
   color: #03a9f4;
 }
 
-nav a.active {
+.desk-nav a.active {
   background: #E7E7E7;
 }
 
-nav a:nth-child(5) {
+.desk-nav a:nth-child(5) {
   border-right: solid 0.5px #E7E7E7;
 }
 
-nav a:nth-child(1) {
+.desk-nav a:nth-child(1) {
   border-left: solid 0.5px #E7E7E7;
 }
 

@@ -37,4 +37,16 @@ $(document).ready(function(){
       }
     });
   });
+
+  $('#open').click(function(ev){
+    ev.preventDefault();
+    $('.sidenav').css("width","100%");
+    $('#close').toggleClass('hidden');
+  });
+
+  $('#close').click(function(ev){
+    ev.preventDefault();
+    $('.sidenav').css("width", "0%");
+    $('#close').toggleClass('hidden');
+  });
 });

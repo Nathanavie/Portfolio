@@ -1,16 +1,29 @@
 @media only screen and (max-width: 1200px) {
 
     header img {
-      grid-column: 1;
+      grid-column: 2;
+      grid-area: logo;
+      margin-right: 11em;
     }
 
-    header img ul {
-      grid-column: 2;
+    .mob-nav {
+      grid-column: 1;
+      grid-area: nav;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-size: 28pt;
+      position: absolute;
+      margin-top: -.5em;
+    }
+
+    .desk-nav {
+      display: none;
     }
 
     header {
       display: grid;
-      grid-template-columns: 5vw auto;
+      grid-template-columns: 5vw 95vw;
+      grid-template-areas: "nav logo";
       padding: 1em 0;
       z-index: 999;
     }
@@ -145,8 +158,12 @@
     grid-column: 1;
   }
 
-  header img ul {
+  .desk-nav {
     grid-column: 2;
+  }
+
+  .mob-nav {
+    /* display: none; */
   }
 
   header {
