@@ -1,0 +1,18 @@
+header img {
+  grid-column: 1;
+}
+header img ul {
+  grid-column: 2;
+}
+header {
+  display: grid;
+  grid-template-columns: 5vw auto;
+  padding: 1em 0;
+}
+.grid {
+  width: 50%;
+  border-right: dashed 1px;
+  left: 0;
+  height: 100vh;
+  position: fixed;
+}
