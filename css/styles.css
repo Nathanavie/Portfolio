@@ -1,26 +1,59 @@
+.hidden {
+  opacity: 0 !important;
+}
+.fadein {
+  animation: fadein 0.5s forwards;
+}
+@keyframes fadein {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
+article {
+  padding-top: 3%;
+}
+
+
 header {
+  height: 1em;
   width: 100%;
-  position: sticky;
+  position: fixed;
   border-bottom: solid 0.5px #ccc;
   background: #cccccc;
+  filter: drop-shadow(0px 4px 5px #9F9F9F);
 }
 
 header img {
-  width: 5vw;
+  width: 2em;
   margin: auto;
   height: 232%;
   margin-top: -12px;
+  transition: all 1s ease;
+}
+
+header img:hover {
+  transform: scale(1.2) rotate3d(1, 1, 0, 50deg) rotateY(360deg);
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
 nav a {
   text-decoration: none;
   color: #350098;
-  padding: 1em 2em;
+  padding: .5em 2em;
   border: solid 0.5px #ccc;
   transition: all .5s ease;
 }
@@ -35,9 +68,202 @@ nav a:hover {
   background: #E7E7E7;
   color: #03a9f4;
 }
+
+nav a.active {
+  background: #E7E7E7;
+}
+
 nav a:nth-child(5) {
   border-right: solid 0.5px #E7E7E7;
 }
+
 nav a:nth-child(1) {
   border-left: solid 0.5px #E7E7E7;
+}
+
+h1 {
+  font-size: 55pt;
+  font-family: 'Allura', cursive;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+.title {
+  font-family: 'Allura', cursive;
+  font-size: 55pt;
+  grid-area: title;
+  margin-top: 0;
+  z-index: 2;
+  text-align: center;
+}
+
+#me img {
+  width: 100%;
+}
+
+.firstnav {
+  padding: 2em 4em;
+  border: solid 2px white;
+  text-decoration: none;
+  color: #000000;
+  margin: auto;
+  background: #cccccc;
+  transition: all 0.3s ease;
+}
+
+.firstnav:hover {
+  background: #cccccc80;
+  color: #ffffff;
+  border: solid 0.3px #03a9f4;
+}
+
+.skill tr th {
+  font-size: 18pt;
+  background: #CCCCCC;
+}
+.skill tr th h4 {
+  float: left;
+  font-size: 26pt;
+  margin: 0;
+  margin-left: 1em;
+  color: #350098;
+}
+.skill tr th img {
+  height: 2em;
+  float: right;
+  margin-right: 2em;
+}
+
+.skill td {
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  color: #350098;
+  text-align: center;
+  font-size: 18pt;
+}
+.skill td:hover {
+  background: #cccccc80;
+}
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.skill {
+  height: 20vw;
+  width: 20vw;
+  border: solid 1px black;
+}
+
+.work {
+  height: 22vw;
+  width: 22vw;
+  border: solid 1px white;
+}
+.work a img{
+  width: 5em;
+}
+
+.workbot {
+  background-color: rgba(74, 74, 74, 0.78);
+  position: absolute;
+  width: 22vw;
+  height: 7em;
+  margin-top: 15%;
+}
+
+.workbot a {
+  transition: all 0.3s ease;
+}
+a#site {
+  position: absolute;
+  margin: 2em 0em 0em 4em;
+}
+
+a#git {
+  position: absolute;
+  margin: 2.5em 0em 0em 12em;
+}
+
+.calc {
+  background-image: linear-gradient(#FFFFFF80, #00000080), url(../img/calc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 230%;
+  background-position: top;
+  transition: all 0.3s ease;
+}
+
+.calc:hover {
+  background-size: 210%;
+}
+
+.dogwalk .workbot h4 {
+  margin-left: 7em;
+}
+
+.calc .workbot h4 {
+  margin-left: 6em;
+}
+
+.workbot h4 {
+  position: absolute;
+  margin-top: 0.5em;
+  color: #FFF;
+}
+
+.dogwalk {
+  background-image: linear-gradient(#FFFFFF80, #00000080), url(../img/Dogwalks.jpg);
+  background-size: cover;
+  background-size: 130%;
+  background-position: top;
+  transition: all 0.3s ease;
+}
+
+.dogwalk:hover {
+  background-size: 110%;
+}
+
+.workbot a:hover {
+  transform: scale(1.1);
+}
+
+.title span {
+  color: #350098;
+}
+
+.talking {
+  color: #350098;
+  text-align: center;
+  font-size: 26pt;
+}
+
+#contact h3 {
+  font-size: 18pt;
+}
+.mail {
+  border: solid 10px #350098;
+  height: 20vw;
+  width: 40vw;
+  margin: auto;
+  border-radius: 2em;
+}
+.mail a {
+  text-decoration: none;
+}
+
+.mail p:hover {
+  transform: scale(1.15);
+  color: #65afe8;
+}
+
+.mail a p {
+  color: #350098;
+  text-align: center;
+  font-size: 30pt;
+  margin-top: 20%;
+  transition: all 0.3s ease;
 }
