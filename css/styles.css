@@ -19,7 +19,7 @@ header img {
 
 nav a {
   text-decoration: none;
-  color: #000000;
+  color: #350098;
   padding: 1em 2em;
   border: solid 0.5px #ccc;
   transition: all .5s ease;
@@ -33,5 +33,11 @@ nav {
 }
 nav a:hover {
   background: #E7E7E7;
-  color: #;
+  color: #03a9f4;
+}
+nav a:nth-child(5) {
+  border-right: solid 0.5px #E7E7E7;
+}
+nav a:nth-child(1) {
+  border-left: solid 0.5px #E7E7E7;
 }
