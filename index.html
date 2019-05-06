@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- link to font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
     <!-- Change the colour of the top of mobile browser. -->
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000000">
@@ -22,52 +23,115 @@
     <header>
       <img src="img/logo.svg" alt="Nathan Atherton">
       <nav>
-          <a href="#me">Me</a>
-          <a href="#timeline">History</a>
+          <a id="home" href="#me">Home</a>
+          <a id="aboutme" href="#timeline">About Me</a>
           <a href="#skills">Skills</a>
           <a href="#work">Work</a>
           <a href="#contact">Contact</a>
       </nav>
     </header>
-    <div class="grid">
-    </div>
     <article>
-      <section id="me">
-        <img src="img/Nathan." alt="Nathan Atherton">
-        <h1>Nathan Atherton</h1>
-        <h2>Web Design and Development Graduate</h2>
-        <p>I am currently studying a Bachelors degree in Web Design and Development at Edge Hill University, I have experience in many different coding languages. These languages are: HTML, CSS, JavaScript, PHP, Python. My strongest languages are HTML, CSS, and JavaScript. I enjoy to learn new techniques in relation to web design and delve into new technologies when possible.</p>
-        <a href="#skills" class="firstnav">Skills</a>
-        <a href="#work" class="firstnav">Work</a>
-        <a href="#contact" class="firstnav">Contact</a>
+      <section id="me" class="me">
+        <img src="img/Nathan.jpg" alt="Nathan Atherton">
+        <section>
+          <h1>Nathan Atherton</h1>
+          <h2>Web Design and Development Graduate</h2>
+        </section>
+        <section>
+          <a href="#timeline" class="firstnav">About Me</a>
+          <a href="#skills" class="firstnav">Skills</a>
+          <a href="#work" class="firstnav">Work</a>
+          <a href="#contact" class="firstnav">Contact</a>
+        </section>
       </section>
       <section id="timeline">
-        <section class="place">
-
-        </section>
-        <section class="place">
-
-        </section>
-        <section class="place">
-
-        </section>
+        <h2 class="title">About <span>Me</span></h2>
+        <p>I am currently studying a Bachelors degree in Web Design and Development at Edge Hill University, I have experience in many different coding languages. These languages are: HTML, CSS, JavaScript, PHP, Python. My strongest languages are HTML, CSS, and JavaScript. I enjoy to learn new techniques in relation to web design and delve into new technologies when possible.</p>
+        <img src="img/timeline.jpg" alt="timeline">
       </section>
       <section id="skills">
-
+        <h2 class="title"><span>My</span> Skills</h2>
+        <table class="skill code">
+          <tr>
+            <th><h4>Coding</h4><img src="img/code.svg"></th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+          </tr>
+          <tr>
+            <td>PHP</td>
+          </tr>
+        </table>
+        <table class="skill design">
+          <tr>
+            <th><h4>Design</h4><img src="img/illustrate.svg"></th>
+          </tr>
+          <tr>
+            <td>Photoshop</td>
+          </tr>
+          <tr>
+            <td>Illustrator</td>
+          </tr>
+          <tr>
+            <td>Sony Vegas</td>
+          </tr>
+          <tr>
+            <td>Premiere Pro</td>
+          </tr>
+        </table>
+        <table class="skill market">
+          <tr>
+            <th><h4>Marketing</h4><img src="img/market.svg"></th>
+          </tr>
+          <tr>
+            <td>Social Media</td>
+          </tr>
+          <tr>
+            <td>SEO</td>
+          </tr>
+          <tr>
+            <td>Newsletters</td>
+          </tr>
+          <tr>
+            <td>Company Blog Posts</td>
+          </tr>
+        </table>
       </section>
       <section id="work">
-        <h2>Projects I have worked on</h2>
-        <div class="proj dogwalks">
-
-        </div>
-        <div class="proj calc">
-
-        </div>
+        <h2 class="title">Projects <span>I</span> have worked on</h2>
+          <section class="dogwalk work">
+            <section class="backzoom">
+            </section>
+            <section class="workbot">
+              <h4>Doggie Walks</h4>
+              <a id="site" href="DoggieWalks/index.html" target="_blank"><img src="img/pc.svg"></a>
+              <a id="git" href="https://github.com/Nathanavie/DoggieWalks" target="_blank"><img src="img/github.svg"></a>
+            </section>
+          </section>
+          <section class="calc work">
+            <section class="backzoom">
+            </section>
+            <section class="workbot">
+              <h4>Absence Calculator</h4>
+              <a id="site" href="Calc/index.html" target="_blank"><img src="img/pc.svg"></a>
+              <a id="git" href="https://github.com/Nathanavie/Absence-Calculator" target="_blank"><img src="img/github.svg"></a>
+            </section>
+          </section>
       </section>
       <section id="contact">
-        <h2>Contact Me</h2>
-        <h3>Want to get in touch?</h3>
-
+        <h2 class="title">Contact <span>Me</span></h2>
+        <h3>Have a project in mind?</h3>
+        <p>Contact me for full-time roles, freelance projects or to simply chat about web development. If you're in the North West, then get in touch and we can grab a slice of pizza!</p>
+        <span class="talking">Let's get talking!</span>
+      <section class="mail">
+        <a href="mailto:nathanatherton2@gmail.com"><p>nathanatherton2@gmail.com</p></a>
+      </section>
       </section>
     </article>
     <footer>
