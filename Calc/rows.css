@@ -1,0 +1,27 @@
+/*CSS Document */
+/* positioning for each class in CSS Grid */
+.header { grid-area: header; }
+.month { grid-area: month; }
+.monthtitle { grid-area: montht; }
+.year { grid-area: year; }
+.yeartitle { grid-area: yeart; }
+.form { grid-area: form; }
+.form2 { grid-area: form2; }
+.form3 { grid-area: form3; }
+
+/*CSS Grid container*/
+.grid-container {
+	display: grid;
+	grid-template-columns: 2% auto 1% auto 2%;
+	grid-template-areas:
+    	'. month . year .'
+    	'. montht . yeart .'
+		'. form form form .'
+		'. form form form .'
+		'. form form form .';
+	grid-gap: 10px;
+	background-color: #F2F2F2;
+	padding: 10px;
+	width: 31.250em;
+	margin: 0 auto;
+}

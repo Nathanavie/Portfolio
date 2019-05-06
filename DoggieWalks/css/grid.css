@@ -1,0 +1,400 @@
+/* layout for screens with a smaller width than 1200px */
+@media only screen and (max-width: 1200px)  {
+  /* flex styling, ensuring all content is in centre with 75% width. */
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+  }
+  /* sidenav styling, stopping overflow off page and hiding the nav before user opens it */
+  .sidenav {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: #eb7859;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  /* close button styling. */
+  #close {
+    background: none;
+    color: #FFFFFF, white;
+    padding-left: 0;
+    font-size: 34pt;
+    text-align: right;
+    cursor: pointer;
+  }
+  /* each link in side navigation styled to fill page correctly. */
+  .sidenav a {
+    color: #FFFFFF;
+    width: 100%;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    float: none;
+    text-align: left;
+  }
+  /* hover element for when user is pressing the button */
+  .sidenav a:hover {
+    background: #FFFFFF81;
+  }
+  /* before tag adding a paw before the text on the link when it is the page that is open */
+  .sidenav .active::before {
+    background-image: url('../img/navpaw.svg');
+    background-size: 25px 20px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    content:"";
+  }
+  /* when user is clicking the link, add pawprint before the text */
+  .sidenav a:hover::before {
+    background-image: url('../img/navpaw.svg');
+    background-size: 25px 20px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    content:"";
+  }
+  /* logo and header styling */
+  .logo {
+    grid-area: logo;
+    width: 45%;
+    margin: auto;
+  }
+  .desk-nav {display: none;}
+  .mob-nav {
+    grid-area: nav;
+    color: #FFFFFF;
+    font-size: 15vw;
+    cursor: pointer;
+  }
+  .headtitle {grid-area: title;}
+  .headtag {grid-area: tag;}
+  .adddog {grid-area: dog;}
+  .call {display: none;}
+  .callmob {
+    grid-area: call;
+    margin-top: 30%;
+    height: 15vw;
+    width: 15vw;
+    animation: bounce 1s infinite;
+    z-index: 1;
+  }
+  .headgrid{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-areas: "call logo nav"
+                        "title title title"
+                        "tag tag tag ";
+    padding: 1em;
+    text-align: center;
+  }
+  /* Hide large dog svg on mobile */
+  .adddog {
+    display:none;
+  }
+  /* css grid to layout the first section of index page. */
+  .indextitle {grid-area: title;}
+  .indextext {grid-area: text;}
+  .locations {grid-area: loc;}
+  .opentime {grid-area: times;}
+  .index1grid {
+    display: grid;
+    grid-template-columns: 74% 25%;
+    grid-template-areas:
+      "title title"
+      "text text"
+      "loc loc"
+      "times times";
+    grid-gap: 1em;
+    padding: 0em 3em 3em 3em;
+    width: 75%;
+    margin: 0 auto;
+  }
+  /* styling of elements on index page */
+  .offers {
+    height: 7em;
+    width: 100%;
+  }
+  .offers h1 {
+    margin: 1em;
+    font-size: 18pt;
+    text-align: center;
+  }
+  .quote {
+    display: none;
+  }
+  /* Grid for the second section on index page */
+  .index2 h2:nth-child(1) {grid-area: title;}
+  .index2 a:nth-child(2) {grid-area: service1;}
+  .index2 a:nth-child(3) {grid-area: service2;}
+  .index2 a:nth-child(4) {grid-area: service3;}
+  .index2 section:nth-child(5) {
+    grid-area: text;
+    width: 100%;
+  }
+  .index2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "title" "service1" "service2" "service3" "text";
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* CSS grid for footer */
+  .left {
+    grid-area: left;
+  }
+  .left p {
+    text-align: center;
+  }
+  .footerlogo {grid-area: mid;}
+  .right {
+    grid-area: right;
+    text-align: center;
+  }
+  .right ul li {
+    text-align: left;
+    margin-left: 25%;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "left"
+      "right"
+      "mid";
+      grid-gap: 1em;
+      width: 100%;
+      background: black;
+      color: white;
+      text-align:
+  }
+  /* CSSgrid for team page */
+  .lori {grid-area: lori;}
+  .gary { grid-area: gary;}
+  .rebecca { grid-area: rebecca;}
+  .joanna { grid-area: joanna;}
+  .lor {grid-area: lorin;}
+  .gar {grid-area: garyn;}
+  .reb {grid-area: rebeccan;}
+  .joa {grid-area: joannan;}
+  .desk{ display: none;}
+  /* styling for mobile elements with mobile class */
+  .mobile {
+    font-size: 18pt;
+    text-align: left;
+    background: #eb7859;
+    padding: 5px;
+    width: 150px;
+    filter: drop-shadow(8px 8px 8px gray);
+  }
+  .teamsection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 150px auto 150px auto;
+    grid-template-areas: "lori gary" "lorin garyn" "rebecca joanna" "rebeccan joannan";
+    grid-gap: 1em;
+    padding-left: 7%;
+  }
+  /* hide large background image in team list on mobile. */
+  .teamlist {
+    width: 0;
+  }
+  .team {
+    width: 150px;
+    height: 150px;
+  }
+  /* service elements styling */
+  .service {
+    height: 130px;
+    width: 90%;
+    transition: all 0.5s ease;
+    position: relative;
+    background-size: 120%;
+    background-position: right;
+    margin: 1em auto 0 auto;
+    cursor: url(../img/1x/asset.png), pointer;
+    filter: drop-shadow(2px 15px 10px gray);
+    z-index: 1;
+  }
+  .service h1{
+    color: #FFFFFF;
+    position: absolute;
+    font-size: 20pt;
+    margin: 1em 0em 0em 0em;
+  }
+  .service h3 {
+    font-size: 15pt;
+    position: absolute;
+    color: #FFFFFF;
+    margin: 2.75em 0em 0em 0em;
+  }
+  .service p {
+    position: absolute;
+    color: #FFFFFF;
+    margin: 3.75em 0em 0em 0em;
+  }
+  .price h2 {
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0em auto;
+    font-size: 20pt;
+  }
+  /* hidden content styling */
+  .h-cont {
+    margin: 0em auto 0 auto;
+    width: 90%;
+  }
+  .h-cont p {
+    font-size: 14pt;
+  }
+  /* CSS grid for locations */
+  .manc {grid-area: Manc;}
+  .macc {grid-area: Macc;}
+  .southport {grid-area: South;}
+  .warrington {grid-area: Warr;}
+  .locgrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "Manc" "Macc" "South" "Warr";
+    grid-gap: 1em;
+    width: 90%
+  }
+  /* Form styling */
+  form {
+    width: 70%;
+  }
+  input[type=image] {
+    margin-left: 35%;
+  }
+}
+/* styling for large devices */
+@media only screen and (min-width: 1201px) {
+  /* standard article style, flexing every page. */
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  /* flex display set for index 1 */
+  .index1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  /* css grid for header */
+  .sidenav {display:none;}
+  .desk-nav { grid-area: nav; }
+  .mob-nav { display: none;}
+  .logo { grid-area: logo;}
+  .headtitle {grid-area: title;}
+  .headtag {grid-area: tag;}
+  .adddog {grid-area: dog;}
+  .call {grid-area: call;}
+  .callmob {display: none;}
+  .headgrid {
+    display: grid;
+    grid-template-columns: 10% 45% 25% 20%;
+    grid-template-areas: "logo nav nav call"
+                          "title title dog dog"
+                          "tag tag dog dog";
+    grid-gap: 1em;
+    padding: 3em;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  /* css grid for section 1 in index */
+  .indextitle {grid-area: title;}
+  .indextext {grid-area: text;}
+  .locations {grid-area: loc;}
+  .opentime {grid-area: times;}
+  .index1grid {
+    display: grid;
+    grid-template-columns: 74% 25%;
+    grid-template-areas:
+      "title title"
+      "text loc"
+      "text times";
+    grid-gap: 1em;
+    padding: 0em 3em 3em 3em;
+    width: 90em;
+  }
+  /* second section on index set to flex for large devices */
+  .index2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* CSS Grid for footer */
+  .left {grid-area: left;}
+  .footerlogo {grid-area: mid;}
+  .right {grid-area: right;}
+  footer {
+    display: grid;
+    grid-template-columns: 33.3%;
+    grid-template-areas:
+      "left mid right";
+      grid-gap: 1em;
+      width: 100%;
+      background: black;
+      color: white;
+  }
+  /* Team section given specific flex properties */
+  .teamsection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  /* standard site wide flex properties */
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 75%;
+  }
+
+  /* CSS grid for locations */
+  .manc {grid-area: Manc;}
+  .macc {grid-area: Macc;}
+  .southport {grid-area: South;}
+  .warrington {grid-area: Warr;}
+  .locgrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "Manc Macc" "South Warr";
+    grid-gap: 4em;
+    width: 100%
+  }
+
+  /* elements with mobile class are hidden */
+ .mobile {display: none;}
+}

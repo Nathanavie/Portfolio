@@ -1,0 +1,538 @@
+/* hide element overriding other display set */
+.hidden {
+  display: none !important;
+}
+/* animation to show dropdown on nav */
+.shownav {
+  animation: navslide 0.5s forwards;
+}
+/* body styling ensuring the page doesnt scroll past either side of viewport and has no margin */
+body {
+  background: url("../img/paws.svg") #DCEAFF;
+  margin: 0;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: left;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+/* header background image */
+header {
+  background: linear-gradient(#00000080, #00000080), url("../img/lab2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* desktop nav styles, all browsers cant highlight text */
+.desk-nav {
+  margin-top: calc(0% + 3em);
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+/* desktop nav buttons styling. */
+.desk-nav a {
+  font-size: 14pt;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  margin: 1em;
+  padding: 1em;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  background: #FFFFFF3d;
+}
+/* styling to change backgound on hover */
+.desk-nav a:hover {
+  cursor: url(../img/1x/asset.png), pointer;
+  background: #FFFFFF81
+}
+/* dropdown styling, flex set */
+#dropdown {
+  display: flex;
+  position: absolute;
+  margin-top: 6.5em;
+}
+/* dropdown button background */
+.dropbtn {
+  background: #FFFFFF3d;
+}
+/* call class given width and animation */
+.call {
+  width: 100%;
+  animation: bounce 2s 1s infinite both;
+}
+/* cursor change to paw on hover */
+.call:hover {
+  cursor: url(../img/1x/asset.png), pointer;
+}
+/* animation keyframes */
+@keyframes navslide {
+  0% {
+    margin-left: -4em;
+  }
+  100% {
+    margin-left: 16.5em;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg) scale(1);
+  }
+  5% {
+    transform: rotate3d(0, 1, 1, 1deg) scale(1.05);
+  }
+  10% {
+    transform: rotate3d(1, 1, 1, -1deg) scale(1);
+  }
+  15% {
+    transform: rotate3d(0, 1, 1, 1deg) scale(1.05);
+  }
+  20% {
+    transform: rotate3d(0, 0, 0, 0deg) scale(1);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg) scale(1);
+  }
+}
+@keyframes show {
+  80% {
+    z-index: 0;
+  }
+  100% {
+    margin-top: 0em;
+    z-index: 2;
+  }
+}
+/* active nav button given ligher background */
+.active {
+  background: #FFFFFF81;
+}
+.activepage {
+  background: #FFFFFF81;
+}
+/* dog ad transition for hover state */
+.adddog {
+  transition: all 0.3s ease-in-out;
+  width: 30vw;
+  margin: auto 0;
+}
+/* scale up to 1.1 on hover with cursor as paw */
+.adddog:hover {
+  transform: scale(1.1);
+  cursor: url(../img/1x/asset.png), pointer;
+}
+/* logo scales to 1.1 on hover with paw cursor */
+.logo{
+  transition: transform 0.5s ease-in-out;
+}
+.logo:hover {
+  cursor: url(../img/1x/asset.png), pointer;
+  transform: scale(1.1);
+}
+/* standard p h1 h2 header titles styles */
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16pt;
+  text-align: left;
+  line-height: 1.5;
+}
+header h1{
+  color: #FFFFFF;
+  font-size: 55pt;
+}
+header h2 {
+  color: #FFFFFF;
+}
+h1 {
+  color: #000000;
+  font-size: 40pt;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 1000;
+}
+h2 {
+  color: #000000;
+  font-size: 35pt;
+}
+article {
+  margin-top: 1em;
+}
+section aside {
+  background: #EB7859B3;
+  width: 94%;
+  padding-left: 6%;
+  font-size: 14pt
+}
+section aside h3 {
+  color: #FFFFFF;
+  text-align: center;
+}
+section aside ul {
+  color: #FFFFFF;
+  list-style: square;
+  line-height: 2;
+  text-align: left;
+  list-style-position: inside;
+}
+/* add paw before and after heading in aside */
+aside h3::before {
+  content: url(../img/navpaw.svg);
+  float: left;
+  width: 1.5em;
+  height: 2em;
+}
+
+aside h3::after {
+  content: url(../img/navpaw.svg);
+  float: right;
+  width: 1.5em;
+  height: 2em;
+  margin-right: 1em;
+}
+/* make days bolder in open times to emphasise differnce between days and times */
+.day {
+  font-weight: bolder;
+}
+.hour {
+  list-style-type: none;
+  margin-left: 1.5em;
+}
+/* offers styling */
+.offers {
+  height: 25em;
+  width: 90em;
+  transition: all 0.5s ease;
+  position: relative;
+  background-size: 120%;
+  background-position: right;
+  margin-bottom: 1em;
+  cursor: url(../img/1x/asset.png), pointer;
+  filter: drop-shadow(2px 15px 10px gray);
+}
+/* hidden content styling */
+.h-cont {
+  transition: all 0.5s ease;
+  margin-top: -5em;
+  z-index: 0;
+  width: 90em;
+  background: #eb7859;
+  filter: drop-shadow(2px 15px 10px gray);
+}
+.h-cont p {
+  padding: 1em;
+  color: #FFFFFF;
+  font-size: 16pt;
+}
+.showh-cont {
+  animation: show 0.5s forwards;
+}
+/* services styling, backgound zoom out on hover */
+.service {
+  height: 25em;
+  width: 90em;
+  transition: all 0.5s ease;
+  position: relative;
+  background-size: 120%;
+  background-position: right;
+  margin-top: 1em;
+  cursor: url(../img/1x/asset.png), pointer;
+  filter: drop-shadow(2px 15px 10px gray);
+  z-index: 1;
+}
+.service:hover {
+  background-size: 100%;
+}
+/* teamlist styles */
+.teamlist {
+  height: 25em;
+  width: 75vw;
+  transition: all 0.5s ease;
+  position: relative;
+  background-size: 120%;
+  background-position: right;
+  margin-bottom: 1em;
+  filter: drop-shadow(2px 15px 10px gray);
+}
+.index2 a section p {
+  text-decoration:overline;
+  color: white;
+}
+
+.index2 a section:hover {
+  background-size: 100%;
+}
+
+.locgrid section {
+  background: #eb7859;
+  padding: 1em;
+  width: 80%;
+  color: #FFFFFF;
+}
+
+/* background images */
+.sitting {
+  background-image: linear-gradient(#00000080, #00000080), url(../img/lab1.jpg);
+}
+.visits {
+  background-image: linear-gradient(#00000080, #00000080), url(../img/walk2.jpg);
+}
+.overnight {
+  background-image: linear-gradient(#00000080, #00000080), url(../img/sit.jpg);
+}
+.lori {
+  background-image:  url(../img/cava.jpg);
+}
+.gary {
+  background-image:  url(../img/fetch.jpg);
+}
+.rebecca {
+  background-image:  url(../img/shepherd.jpg);
+}
+.joanna {
+  background-image:  url(../img/pupwater.jpg);
+}
+.walking {
+  background-image: linear-gradient(#00000080, #00000080), url(../img/forestdog.jpg);
+}
+.house {
+  background-image: linear-gradient(#00000080, #00000080), url(../img/shake.jpg);
+}
+.daycare {
+  background-image: linear-gradient(#00000080, #00000080), url(../img/4dog.jpg);
+}
+/* quote and price styles, overwriting positions and width previously set */
+.quote {
+  position: absolute !important;
+  left: 75%;
+  width: 25% !important;
+  background-color: #eb7859CC;
+  box-sizing: border-box;
+  color: black;
+  height: 100%
+}
+.price {
+  position: absolute !important;
+  left: 75%;
+  width: 25% !important;
+  background-color: #eb7859;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  height: 100%
+}
+.price h2 {
+  color: #FFFFFF;
+  text-align: center;
+  margin: 3em auto;
+}
+.service h1{
+  color: #FFFFFF;
+  position: absolute;
+  font-size: 40pt;
+  margin: 3em 7em 0em 1em;
+}
+.service h3 {
+  font-size: 32pt;
+  position: absolute;
+  color: #FFFFFF;
+  margin: 5em 7em 0em 1.25em;
+}
+.service p {
+  position: absolute;
+  color: #FFFFFF;
+  margin: 12em 0em 0em 2.5em;
+}
+.team {
+  position: absolute;
+  left: 75%;
+  background-color: #eb7859CC;
+  box-sizing: border-box;
+  color: black;
+  height: 100%;
+}
+.offers h1 {
+  font-size: 40pt;
+  position: absolute;
+  color: #FFFFFF;
+  margin: 3em 7em 0em 1em;
+}
+.offers h2 {
+  font-size: 32pt;
+  position: absolute;
+  color: white;
+  margin: 5em 7em 0em 1.25em;
+}
+.teamlist h1 {
+  font-size: 40pt;
+  position: absolute;
+  color: white;
+  margin: 3em 7em 0em 1em;
+}
+.teamlist h2 {
+  font-size: 32pt;
+  position: absolute;
+  color: white;
+  margin: 5em 7em 0em 1.25em;
+}
+.quote h2 {
+  color: white;
+  font-size: 40pt;
+  line-height: 7em;
+  text-align: center;
+  margin: 0;
+}
+/* last paragraph aligned to flex start to make more readable */
+.lastpar {
+  align-self: flex-start;
+  font-size: 18pt;
+  margin: 0 auto;
+  width: 75%;
+}
+.lastpar span{
+  color: #EB7859;
+}
+.footerlogo {
+  width: 12em;
+  margin: auto;
+}
+.footerlogo a:hover {
+  cursor: url(../img/1x/asset.png), pointer;
+}
+.left {
+  padding-left: 1em;
+}
+.right {
+  text-align: right;
+  padding-right: 1em;
+}
+.right ul {
+  list-style: none;
+}
+/* all a tags in flex classes styling */
+.flex a {
+  text-decoration: none;
+  font-size: 16pt;
+  text-align: center;
+  color: #FFFFFF;
+  background: #EB7859;
+  padding: 1em;
+  width: 15em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  transition: transform 0.5s ease;
+  align-self: center;
+}
+.flex a:hover {
+  transform: scale(1.2);
+  cursor: url(../img/1x/asset.png), pointer;
+}
+.sart {
+  margin-bottom: 2em;
+}
+/* form styling */
+input[type=text], input[type=email], input[type=tel], textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #EB7859;
+  box-sizing: border-box;
+  resize: vertical;
+  margin: 1em auto;
+}
+
+input[type=image] {
+  width: 6em;
+  margin-left: 47.5%;
+  vertical-align: middle;
+  transition: transform 0.5s ease;
+}
+input[type=image]:hover {
+  transform: scale(1.2);
+}
+input[type=image]:active {
+  transform: scale(0.2);
+}
+form {
+  width: 90em;
+  background: #EB7859;
+  padding: 2em;
+  margin: 4em auto;
+  color: #FFFFFF;
+}
+.smallprint {
+  font-size: 8pt;
+}
+/* gallery styling */
+.gallerycontainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.gallery {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.gal-img {
+  width: 20vw;
+  height: 20vw;
+  margin: 1%;
+  transition: all 0.8s ease;
+  background-size: cover;
+  background-position: center;
+  cursor: url(../img/1x/asset.png), pointer;
+}
+.gal-img:hover {
+  transform: scale(1.05);
+}
+
+/* gallery images */
+#img1 {
+  background-image: url(../img/gallery/gal1.jpeg);
+}
+
+#img2 {
+  background-image: url(../img/gallery/gal2.jpg);
+}
+
+#img3 {
+  background-image: url(../img/gallery/gal3.jpeg);
+}
+
+#img4 {
+  background-image: url(../img/gallery/gal4.jpeg);
+}
+
+#img5 {
+  background-image: url(../img/gallery/gal5.jpg);
+}
+
+#img6 {
+  background-image: url(../img/gallery/gal6.jpg);
+}
+
+#img7 {
+  background-image: url(../img/gallery/gal7.jpeg);
+}
+
+#img8 {
+  background-image: url(../img/gallery/gal8.jpeg);
+}
+
+#img9 {
+  background-image: url(../img/gallery/gal9.jpeg);
+}
+
+#img10 {
+  background-image: url(../img/gallery/gal10.jpeg);
+}
+
+#img11 {
+  background-image: url(../img/gallery/gal11.jpeg);
+}
+
+#img12 {
+  background-image: url(../img/gallery/gal12.jpeg);
+}
