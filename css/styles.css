@@ -79,7 +79,6 @@ header {
 header img {
   width: 2em;
   margin: auto;
-  height: 232%;
   margin-top: -12px;
   transition: all 1s ease;
 }
@@ -220,11 +219,13 @@ table {
 a#site {
   position: absolute;
   margin: 2em 0em 0em 4em;
+  margin-left: calc(100% - 70%);
 }
 
 a#git {
   position: absolute;
   margin: 2.5em 0em 0em 12em;
+  margin-left: calc(100% - 44%);
 }
 
 .calc {
