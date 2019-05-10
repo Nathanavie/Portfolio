@@ -298,12 +298,16 @@
   .calc {
     grid-area: calc;
   }
+  .git {
+    grid-area: git;
+  }
   #work {
     display: grid;
     height: 100vh;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 7em 32em;
-    grid-template-areas: "title title title title" ". dog calc. ";
+    grid-gap: 1em;
+    grid-template-areas: "title title title title title" ". git dog calc. ";
     background: #CCCCCC;
     padding-top: 3%;
   }

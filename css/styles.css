@@ -237,6 +237,19 @@ a#git {
   transition: all 0.3s ease;
 }
 
+.git {
+  background-image: linear-gradient(#FFFFFF80, #00000080), url(../img/git.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 230%;
+  background-position: top;
+  transition: all 0.3s ease;
+}
+
+.git:hover {
+  background-size: 210%;
+}
+
 .calc:hover {
   background-size: 210%;
 }
@@ -246,6 +259,10 @@ a#git {
 }
 
 .calc .workbot h4 {
+  margin-left: 6em;
+}
+
+.git .workbot h4 {
   margin-left: 6em;
 }
 
