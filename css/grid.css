@@ -127,13 +127,21 @@
       margin: auto;
       margin-top: 4em;
     }
+    .git {
+      grid-area: git;
+      width: 90%;
+      height: 20em;
+      margin: auto;
+      margin-top: 4em;
+    }
     #work {
       display: grid;
-      height: 64em;
+      height: 100%;
       grid-template-columns: 100%;
-      grid-template-areas: "title" "dog" "calc";
+      grid-template-areas: "title" "dog" "calc" "git";
       background: #CCCCCC;
       padding-top: 4em;
+      padding-bottom: 2em;
     }
 
     #contact h3 {
