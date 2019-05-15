@@ -26,20 +26,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
   </head>
-  <body>
-    <header>
+  <body onload="animate().init();">
+    <header class="headershow">
       <img src="img/logo.svg" alt="Nathan Atherton">
       <nav class="mob-nav">
        <span id="open">&#9776;</span>
-     </nav>
-     <nav class="sidenav">
-      <aside class="hidden" id="close">&#10006;</aside>
-      <a id="home" href="#me">Home</a>
-      <a id="aboutme" href="#timeline">About Me</a>
-      <a href="#skills">Skills</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      </nav>
+      <nav class="sidenav">
+        <aside class="hidden" id="close">&#10006;</aside>
+        <a id="home" href="#me">Home</a>
+        <a id="aboutme" href="#timeline">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <nav class="desk-nav">
           <a id="home" href="#me">Home</a>
           <a id="aboutme" href="#timeline">About Me</a>
@@ -50,12 +50,12 @@
     </header>
     <article>
       <section id="me" class="me">
-        <img src="img/Nathan.jpg" alt="Nathan Atherton">
-        <section>
+        <img src="img/Nathan.jpg" class="sectshow" alt="Nathan Atherton">
+        <section class="sectshow">
           <h1>Nathan Atherton</h1>
           <h2>Web Design and Development Graduate</h2>
         </section>
-        <section>
+        <section class="sectshow">
           <a href="#timeline" class="firstnav">About Me</a>
           <a href="#skills" class="firstnav">Skills</a>
           <a href="#work" class="firstnav">Work</a>
@@ -63,13 +63,13 @@
         </section>
       </section>
       <section id="timeline">
-        <h2 class="title">About <span>Me</span></h2>
-        <p>I am a recent graduate from Edge Hill University after completing a Bachelors degree in Web Design and Development. I have experience in many different coding languages. These languages are: HTML, CSS, JavaScript, PHP, and Python. My strogest languages are HTML, CSS, and JavaScript. I enjoy learning new techniques in relation to Web Design and delving into new technologies when possible.</p>
-        <img src="img/timeline.jpg" alt="timeline">
+        <h2 class="title secthide">About <span>Me</span></h2>
+        <p class="secthide">I am a recent graduate from Edge Hill University after completing a Bachelors degree in Web Design and Development. I have experience in many different coding languages. These languages are: HTML, CSS, JavaScript, PHP, and Python. My strogest languages are HTML, CSS, and JavaScript. I enjoy learning new techniques in relation to Web Design and delving into new technologies when possible.</p>
+        <img src="img/timeline.jpg" alt="timeline" class="secthide">
       </section>
       <section id="skills">
-        <h2 class="title"><span>My</span> Skills</h2>
-        <table class="skill code">
+        <h2 class="title secthide"><span>My</span> Skills</h2>
+        <table class="skill code secthide">
           <tr>
             <th><h4>Coding</h4><img src="img/code.svg"></th>
           </tr>
@@ -86,7 +86,7 @@
             <td>PHP</td>
           </tr>
         </table>
-        <table class="skill design">
+        <table class="skill design secthide">
           <tr>
             <th><h4>Design</h4><img src="img/illustrate.svg"></th>
           </tr>
@@ -103,7 +103,7 @@
             <td>Premiere Pro</td>
           </tr>
         </table>
-        <table class="skill market">
+        <table class="skill market secthide">
           <tr>
             <th><h4>Marketing</h4><img src="img/market.svg"></th>
           </tr>
@@ -122,8 +122,8 @@
         </table>
       </section>
       <section id="work">
-        <h2 class="title">Projects <span>I</span> have worked on</h2>
-          <section class="dogwalk work">
+        <h2 class="title secthide">Projects <span>I</span> have worked on</h2>
+          <section class="dogwalk work secthide">
             <section class="backzoom">
             </section>
             <section class="workbot">
@@ -132,7 +132,7 @@
               <a id="git" href="https://github.com/Nathanavie/DoggieWalks" target="_blank"><img src="img/github.svg"></a>
             </section>
           </section>
-          <section class="calc work">
+          <section class="calc work secthide">
             <section class="backzoom">
             </section>
             <section class="workbot">
@@ -141,7 +141,7 @@
               <a id="git" href="https://github.com/Nathanavie/Absence-Calculator" target="_blank"><img src="img/github.svg"></a>
             </section>
           </section>
-          <section class="git work">
+          <section class="git work secthide">
             <section class="backzoom">
             </section>
             <section class="workbot">
@@ -152,13 +152,13 @@
           </section>
       </section>
       <section id="contact">
-        <h2 class="title">Contact <span>Me</span></h2>
-        <h3>Have a project in mind?</h3>
-        <p>Contact me for full-time roles, freelance projects or to simply chat about web development. If you're in the North West, then get in touch and we can have a chat!</p>
-        <span class="talking">Let's get talking!</span>
-      <section class="mail">
-        <a href="mailto:nathanatherton2@gmail.com"><p>nathanatherton2@gmail.com</p></a>
-      </section>
+        <h2 class="title secthide">Contact <span>Me</span></h2>
+        <h3 class="secthide">Have a project in mind?</h3>
+        <p class="secthide">Contact me for full-time roles, freelance projects or to simply chat about web development. If you're in the North West, then get in touch and we can have a chat!</p>
+        <span class="talking secthide">Let's get talking!</span>
+        <section class="mail secthide">
+          <a href="mailto:nathanatherton2@gmail.com"><p>nathanatherton2@gmail.com</p></a>
+        </section>
       </section>
     </article>
     <footer>
@@ -167,7 +167,8 @@
         <a href="https://www.linkedin.com/in/nathan-atherton"><img src="img/linkedin.png" alt="Nathan's LinkedIn"></a>
       </section>
       <section class="mid">
-        <a href="tel:07584032425">07584032425</a>
+        <a href="tel:07584032425">Mob: 07584032425</a>
+        <a href="CV.pdf" target="_blank">My CV</a>
       </section>
       <section class="right">
         <a href="#me">Home</a>

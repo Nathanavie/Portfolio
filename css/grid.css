@@ -116,8 +116,17 @@
       height: 20em;
       margin: auto;
     }
+    .dogwalk .workbot h4 {
+      margin-left: 40%;
+    }
+    .calc .workbot h4 {
+      margin-left: 40%;
+    }
+    .git .workbot h4 {
+      margin-left: 40%;
+    }
     .workbot {
-      width: 90%;
+      width: 100%;
       margin-top: 13em;
     }
     .calc {

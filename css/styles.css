@@ -2,6 +2,48 @@
   opacity: 0 !important;
 }
 
+.secthide {
+  opacity: 0;
+}
+
+.sectshow {
+  animation: websiteFadeIn 1s 0.25s forwards;
+  opacity: 0;
+}
+
+.headershow {
+  animation: headerFadeIn 1s 0.25s forwards;
+  opacity: 0;
+}
+
+@keyframes headerFadeIn {
+  0% {
+    opacity: 0;
+    margin-left: 100vw;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0vw;
+  }
+}
+
+@keyframes websiteFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 /* close button styling. */
 #close {
   background: none;
@@ -210,7 +252,7 @@ table {
   position: absolute;
   width: 22vw;
   height: 7em;
-  margin-top: 15%;
+  margin-top: 67%;
 }
 
 .workbot a {
@@ -302,11 +344,10 @@ a#git {
   font-size: 18pt;
 }
 .mail {
-  border: solid 10px #350098;
   height: 20vw;
-  width: 40vw;
   margin: auto;
-  border-radius: 2em;
+  font-family: 'Allura', cursive;
+  font-size: 50pt;
 }
 .mail a {
   text-decoration: none;
@@ -320,8 +361,8 @@ a#git {
 .mail a p {
   color: #350098;
   text-align: center;
-  font-size: 30pt;
-  margin-top: 20%;
+  font-size: 66pt;
+  font-weight: bolder;
   transition: all 0.3s ease;
 }
 .left img {
@@ -332,7 +373,10 @@ a#git {
   filter: invert(1);
 }
 .mid {
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 .right {
   margin-right: 1em;
