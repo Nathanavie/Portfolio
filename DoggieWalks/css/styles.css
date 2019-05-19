@@ -73,7 +73,6 @@ header {
 /* animation keyframes */
 @keyframes navslide {
   0% {
-    margin-left: -4em;
     margin-top: 3em;
     transform: rotateX(90deg);
   }
@@ -82,7 +81,6 @@ header {
     transform: rotateX(20deg);
   }
   100% {
-    margin-left: 16.5em;
     margin-top: 6em;
     transform: rotateX(0deg);
   }
