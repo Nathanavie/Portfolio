@@ -53,7 +53,9 @@ header {
 #dropdown {
   display: flex;
   position: absolute;
-  margin-top: 6.5em;
+  margin-top: 3.5em;
+  margin-left: 306px;
+  transform: rotateX(90deg);
 }
 /* dropdown button background */
 .dropbtn {
@@ -72,9 +74,17 @@ header {
 @keyframes navslide {
   0% {
     margin-left: -4em;
+    margin-top: 3em;
+    transform: rotateX(90deg);
+  }
+  50% {
+    margin-top: 6em;
+    transform: rotateX(20deg);
   }
   100% {
     margin-left: 16.5em;
+    margin-top: 6em;
+    transform: rotateX(0deg);
   }
 }
 @keyframes bounce {
